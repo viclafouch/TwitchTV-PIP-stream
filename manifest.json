@@ -3,7 +3,15 @@
   "description": "Enable Picture in Picture for TwitchTV",
   "version": "1.0",
   "manifest_version": 3,
-  "action": {
-    "default_icon": "hello_extensions.png"
-  }
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "host_permissions": ["*://*.twitch.tv/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["scripting", "activeTab"],
+  "action": {}
 }
